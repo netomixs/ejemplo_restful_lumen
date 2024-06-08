@@ -8,6 +8,7 @@
 4. [Configuración](#configuración)
 5. [Requerimientos Mínimos](#requerimientos-mínimos)
 6. [Uso](#uso)
+7. [Log](#log)
  
 
 # Descripción
@@ -205,3 +206,5 @@ Para levantar el servidor de desarrollo, usa el siguiente comando desde la raiz 
 ````bash
 php -S localhost:8000 -t public
 ````
+## Log
+El resgitro de log se encuentra en el directorio `storage\logs\events.log`
