@@ -8,8 +8,7 @@
 4. [Configuración](#configuración)
 5. [Requerimientos Mínimos](#requerimientos-mínimos)
 6. [Uso](#uso)
-7. [Contribuir](#contribuir)
-8. [Licencia](#licencia)
+ 
 
 # Descripción
 
@@ -149,3 +148,60 @@ curl -X POST /costumer \
 }
 ```
 ## Instalación
+### Proyecto
+Copia el proyecto e ingresa a la carpeta del mismo
+````bash
+git clone  https://github.com/netomixs/ejemplo_restful_lumen
+cd ejemplo_restful_lumen
+````
+
+Ingresa hasta el mimo drectorio donde se encuentre y ejecuta `composer.json `
+
+```bash
+composer install
+````
+Agrega el archivo `.env` a la raiz del proyecto
+### Base de datos
+Crea una base de datos e importa el archivo de tablas `Tablas.sql`
+## Configuración
+Agregar las varibles de entorno al archivo `.env`
+````env
+APP_NAME=Lumen
+APP_ENV=local
+APP_DEBUG=false
+APP_URL=http://localhost
+DB_CONNECTION=mysql
+DB_HOST=  host de la base de datos
+DB_PORT= puerto de la base de datos
+DB_DATABASE=nombre de la base de datos
+DB_USERNAME=usuario de la base de datos
+DB_PASSWORD= contraseña de la base de datos
+                              
+JWT_SECRET=palabra_seceta
+```` 
+**Ejemplo**
+````env
+APP_NAME=Lumen
+APP_ENV=local
+APP_KEY=
+APP_DEBUG=false
+APP_URL=http://localhost
+APP_TIMEZONE=UTC
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=mydb
+DB_USERNAME=root
+DB_PASSWORD=
+JWT_SECRET=palabra_seceta
+```` 
+## Requerimientos Mínimos
+- `PHP >= 8.0.3`
+- `Composer`
+- `Base de datos MySQL o MariaDB`
+
+## Uso
+Para levantar el servidor de desarrollo, usa el siguiente comando desde la raiz del proyecto:
+````bash
+php -S localhost:8000 -t public
+````
